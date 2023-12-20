@@ -1,5 +1,7 @@
 using UnityEngine;
+using System;
 using System.Collections.Generic;
+
 
 public class NumberFilter_badCode : MonoBehaviour
 {
@@ -18,4 +20,56 @@ public class NumberFilter_badCode : MonoBehaviour
     public int[] evenNumbers;
     public int[] oddNumbers;
 
+   
+
+    void FilterNumbers()
+    {
+        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        var odd = numbers.Where(num => num % 2 != 0).ToArray();
+        var even = numbers.Where(num => num % 2 == 0).ToArray();
+
+        Debug.Log("Odd Numbers:" + string.Join(", ", odd));
+        Debug.Log("Even Number;" + string.Join(", ", even));
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
