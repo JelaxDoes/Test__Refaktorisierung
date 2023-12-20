@@ -13,39 +13,48 @@ public class ItemCollector_badCode : MonoBehaviour
     - Nach Abschluss aller Refaktorisierungen laden Sie oli90martin@web.de als Collaborator zu Ihrer Git-Repository ein.
     */
 
-                        public GameObject item1;
-                        public GameObject item2;
-                        public GameObject item3;
-                        public GameObject item4;
-                        public GameObject item5;
-           private List<GameObject> collectedItems = new List<GameObject>();
+     public GameObject Item1;
+     public GameObject Item2;
+     public GameObject Item3;
+     public GameObject Item4;
+     public GameObject Item5;
+     private List<GameObject> CollectedItems = new List<GameObject>();
 
-            void Update()
-            {
-                CollectItems();
-            }
+     void Update()
+     {
+         CollectItems();
+     }
 
     void CollectItems()
     {
-        if (item1 != null)
+        
+        if (Item1 != null)
         {
-            collectedItems.Add(item1);
+            CollectedItems.Add(Item1);
         }
-        if (item2 != null)
+        else
         {
-            collectedItems.Add(item2);
+           foreach(var item in CollectedItems)
+            {
+                CollectedItems.Add(Item);
+            }
         }
-        if (item3 != null)
+
+        if (Item2 != null)
         {
-            collectedItems.Add(item3);
+            CollectedItems.Add(Item2);
         }
-        if (item4 != null)
+        if (Item3 != null)
         {
-            collectedItems.Add(item4);
+            CollectedItems.Add(Item3);
         }
-        if (item5 != null)
+        if (Item4 != null)
         {
-            collectedItems.Add(item5);
+            CollectedItems.Add(Item4);
+        }
+        if (Item5 != null)
+        {
+            CollectedItems.Add(Item5);
         }
     }
 }
